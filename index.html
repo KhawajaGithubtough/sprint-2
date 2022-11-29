@@ -1,41 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+    <head>
+        <title>
+            Profile Form Using local storage js-part5
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+      <body>
 
-    <form id="formV" >
-        <div class="formName"> <span class="span-text">Name</span>
-          <input type="text" placeholder="Enter Your Name" name="name" id="name" autocomplete="off" required>
+        <h1 class="text-info text-center">Task Management</h1>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <h3 class="text-warning">
+                                Task Done Status
+                            </h3>
+
+                            <input type="radio" name="com" value="completed"> Commpleted<br>
+                            <input type="radio" name="com" value="notcommpleted">Not Completed
+                        </div>
+
+                        <div class="row">
+                            <h3 class="text-warning">
+                                Select Task Work Status 
+                            </h3>
+                            <input type="checkbox" id="ip" value="inp">In Progress
+                    <br>
+                    <input type="checkbox" id="bp" value="bp">Being Completed
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <h3 class="text-warning">
+                                Task Status
+                            </h3>
+                            <select id="ct">
+                                <option>Select Your Task Status</option>
+                                <option value="started">Started </option>
+                                <option value="inprogress">In Progress</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <h3 class="text-warning">
+                                Task Description
+                            </h3>
+                            <textarea id="des"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button class="btn btn-danger" onclick="saveTask()">Submit</button>
+                </div>
+            </div>
         </div>
-
-        <div class="formDetails"><span class="span-Details">Description</span>
-            <textarea placeholder="Enter Description" name="description" id="description" autocomplete="off" required></textarea>
-          </div>
-
-        <div id="formAssignedTo"></div>
-          <span>Assign To:</span>
-          <input type="text" placeholder="Enter Name" name="tname" id="tname" autocomplete="off" required>
-
-        </div>
-
-        
-        <div class="formDate"><span class="span-Date">Due Date</span>
-          <input type="text" placeholder="mm/dd/yy" name="date" id="date" autocomplete="off" required>
-        </div>
-
-       
-
-        
-        <div class="formSubmit">
-          <button class="submit-btn" id="submit" type="submit" name="submit">Add Task</button>
-        </div>
-</form>
-
-    
-</body>
+        <script src="./script.js"> </script>
+      </body>
 </html>
